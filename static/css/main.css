@@ -1,4 +1,25 @@
+html {
+    font-family: sans-serif; 
+    background: #eee; 
+    padding: 1rem;
+}
 body {
+    padding: 0.5rem;
+    margin: 0 auto;
+    background: white;
+}
+
+nav {
+    background: gray;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+}
+nav a {
+    padding: 0.25rem 0.5rem;
+}
+
+nav h1 {
+    flex: auto;
     margin: 0;
-    font-family: sans-serif;
 }
