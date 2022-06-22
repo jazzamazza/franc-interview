@@ -6,7 +6,7 @@
 
 {% block body %}
 
-<div class ="given">
+<div class ="home">
     <h1>Hello!
         {% if username %}
             {{ username }}
@@ -14,16 +14,17 @@
         </h1>
         {% if not username %}
         <h2>To view a timeline enter your username below:</h2>
-        <form method="post">
+        <form action = "/timeline" method="post">
             <label for="username">Username:</label>
             <input name="username" id="username" required>
-            <input type="submit" value="View Timeline">
+            <input type="submit" value="View timeline">
         </form>
         
             <p>to view a users timeline go to /?username=<b>username</b></p>
             <p><a href="/?username=Kyle">example</a></p>
             <p>Posts can be found <a href="/posts">here</a></p>
             <p>Users and there follows can be found <a href="/users">here</a></p>
+            <p>go to test page <a href="/test">here</a></p>
         {% else %}
             <p>Your tweets:</p>
             <ul>

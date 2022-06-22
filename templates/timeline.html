@@ -7,9 +7,11 @@
 {% block body %}
 
 <div class="timeline">
+    
     <h1>X's Timeline</h1>
 
     <table>
+        {% for username in result.items() %}
         <tr>
             <th>User</th>
             <th>Post</th>
@@ -17,10 +19,12 @@
         </tr>
         <tr>
             <td>Username</td>
-            <td>This is a post</td>
+            <td>{{username}}</td>
             <td>17/03/1999</td>
         </tr>
+        {% endfor %}
     </table>
+    
 </div>
 
 {% endblock %}
