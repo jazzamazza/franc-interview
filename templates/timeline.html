@@ -9,22 +9,22 @@
 <div class="timeline">
     
     <h1>X's Timeline</h1>
-
+    {% if result.items()%}
     <table>
-        {% for username in result.items() %}
+        {% for item in result.items() %}
         <tr>
             <th>User</th>
             <th>Post</th>
             <th>Date posted</th>
         </tr>
         <tr>
-            <td>Username</td>
-            <td>{{username}}</td>
+            <td>{{item['Franc']}}</td>
+            <td>{{item['Franc']['status']}}</td>
             <td>17/03/1999</td>
         </tr>
         {% endfor %}
     </table>
-    
+    {% endif %}
 </div>
 
 {% endblock %}

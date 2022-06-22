@@ -15,8 +15,9 @@ def timeline_view():
     if request.method == 'POST':
         result = request.form.to_dict()
         print(result)
-        timeline = get_timeline(result['username'])
-        return render_template('timeline.html', result = timeline)
+        username = result['username']
+        timeline = get_timeline(username)
+        return render_template('timeline.html', user = username, result = timeline)
    
 def get_timeline(username):
     #username = request.args.get('username')
@@ -73,6 +74,7 @@ def get_timeline(username):
         #print(dict1['status'])
         return all_posts
     except:
+        
         return render_template('index.html')
 
 @app.route('/users')
