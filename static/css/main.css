@@ -1,6 +1,6 @@
 html {
     font-family: sans-serif; 
-    background: #eee; 
+    background: white; 
     padding: 1rem;
 }
 body {
@@ -16,6 +16,8 @@ nav {
     padding: 0.25rem 0.5rem;
 }
 nav a {
+    flex: auto;
+    font-size: medium;
     padding: 0.25rem 0.5rem;
 }
 
@@ -23,3 +25,22 @@ nav h1 {
     flex: auto;
     margin: 0;
 }
+
+#timeline{
+    background: lightgrey;
+}
+
+#timeline td, #timeline th {
+    border: 1px solid grey;
+    padding: 8px;
+  }
+#timeline tr{
+    background: white;
+}
+
+#timeline th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+    background-color: lightcyan;
+  }

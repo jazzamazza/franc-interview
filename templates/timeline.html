@@ -1,29 +1,31 @@
 {% extends 'base.html' %}
 
 {% block head %} 
- <title>UserX - Timeline</title>
+ <title>{{user}}'s - Timeline</title>
 {% endblock %}
 
 {% block body %}
 
 <div class="timeline">
     
-    <h1>X's Timeline</h1>
-    {% if result.items()%}
-    <table>
-        {% for item in result.items() %}
+    <h1>{{user}}'s Timeline</h1>
+    
+    {% if timeline%}
+    {% for post in timeline %}
+    <table id = "timeline">
         <tr>
             <th>User</th>
-            <th>Post</th>
-            <th>Date posted</th>
+            <th>Status</th>
+            <th>Posted</th>
         </tr>
         <tr>
-            <td>{{item['Franc']}}</td>
-            <td>{{item['Franc']['status']}}</td>
-            <td>17/03/1999</td>
+            <td>{{post.username}}:</td>
+            <td>{{post.status}}</td>
+            <td>{{post.time}}</td>
         </tr>
-        {% endfor %}
     </table>
+    <br>
+    {% endfor %}
     {% endif %}
 </div>
 
